@@ -1,21 +1,25 @@
 import React, {PureComponent} from 'react';
-import {Container, Header, Content, Item, Input} from 'native-base';
+import {Container, Header, Content, Item, Input, View} from 'native-base';
+import {StyleSheet} from 'react-native';
+import {globalStyles} from '../styles';
 interface IInputProps {
   placeholder: string;
-  onChange: () => void;
+  onChange: (value: string) => void;
+  value: string;
 }
 export default class Textbox extends PureComponent<IInputProps> {
   render() {
-    const {placeholder, onChange} = this.props;
+    const {placeholder, onChange, value} = this.props;
     return (
-      <Container>
-        <Header />
-        <Content>
-          <Item rounded>
-            <Input placeholder={placeholder} onChange={onChange} />
-          </Item>
-        </Content>
-      </Container>
+      <View style={globalStyles.padding}>
+        <Item rounded>
+          <Input
+            value={value}
+            placeholder={placeholder}
+            onChangeText={cityName => onChange(cityName)}
+          />
+        </Item>
+      </View>
     );
   }
 }

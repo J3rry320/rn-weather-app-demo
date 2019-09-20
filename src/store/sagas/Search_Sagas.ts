@@ -8,7 +8,7 @@ function* searchWeather(cityName: any) {
     const payload = yield call(getRequest, url);
     yield put({type: SearchConstants.SEARCH_CITY_WEATHER_SUCCESS, payload});
   } catch (error) {
-    yield put({type: SearchConstants.SEARCH_CITY_WEATHER_FAILURE, payload: error});
+    yield put({error, type: SearchConstants.SEARCH_CITY_WEATHER_FAILURE});
   }
 }
 export function* rootSearchSaga() {

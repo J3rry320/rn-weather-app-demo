@@ -8,7 +8,7 @@ export const searchWeatherForCitySuccess = (payload: Weatherapp.WeatherResults) 
   payload,
   type: Search_Constants.SEARCH_CITY_WEATHER_SUCCESS,
 });
-export const searchWeatherForCityFailure = (payload: Error) => ({
-  payload,
+export const searchWeatherForCityFailure = (error: Error) => ({
+  error,
   type: Search_Constants.SEARCH_CITY_WEATHER_FAILURE,
 });

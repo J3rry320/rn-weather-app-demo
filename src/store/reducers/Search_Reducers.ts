@@ -13,6 +13,20 @@ export default function(state = INIT_STATE, action: any) {
         weatherResultsLoading: true,
       };
     }
+    case SearchWeather.SEARCH_CITY_WEATHER_SUCCESS: {
+      return {
+        ...state,
+        weatherResultsLoading: false,
+        weatherResults: action.payload,
+      };
+    }
+    case SearchWeather.SEARCH_CITY_WEATHER_FAILURE: {
+      return {
+        ...state,
+        weatherResultsLoading: false,
+        weatherResultsError: action.error,
+      };
+    }
     default: {
       return state;
     }
