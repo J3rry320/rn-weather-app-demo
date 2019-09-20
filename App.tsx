@@ -10,7 +10,7 @@
 import React from 'react';
 import { createAppContainer, createSwitchNavigator } from 'react-navigation';
 import { Provider } from 'react-redux';
-import { store } from './src/services';
+import { store } from './src/store';
 import LandingPage from './src/views/LandingPage';
 
 let RootStack = createSwitchNavigator({
