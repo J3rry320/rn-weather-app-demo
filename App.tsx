@@ -7,12 +7,11 @@
  * @flow
  */
 
-import React, {Fragment} from 'react';
-import {SafeAreaView, StyleSheet, ScrollView, View, Text, StatusBar} from 'react-native';
-import {createSwitchNavigator, createAppContainer} from 'react-navigation';
+import React from 'react';
+import { createAppContainer, createSwitchNavigator } from 'react-navigation';
+import { Provider } from 'react-redux';
+import { store } from './src/services';
 import LandingPage from './src/views/LandingPage';
-import {Provider} from 'react-redux';
-import {store} from './src/services';
 
 let RootStack = createSwitchNavigator({
   Landing: LandingPage,

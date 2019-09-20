@@ -1,15 +1,11 @@
 {
-  "parser": "babel-eslint",
-  "parserOptions": {
-    "sourceType": "module",
-    "ecmaFeatures": {
-      "jsx": true,
-      "modules": true
-    }
-  },
-  "plugins": ["prettier"],
-  "extends": ["prettier"],
+  "extends": ["airbnb"],
+  "plugins": ["@typescript-eslint"],
+  "parser": "@typescript-eslint/parser",
   "rules": {
-    "prettier/prettier": "error"
+    "import/no-unresolved": 0,
+    "react/jsx-filename-extension": {
+      "extensions": [".jsx", ".tsx"]
+    }
   }
 }

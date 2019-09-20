@@ -1,4 +1,4 @@
-import {SEARCH_CITY} from '../constants/Search';
+import {SEARCH_CITY} from '../constants/Search_Constants';
 
 const INIT_STATE = {
   searchResults: null,
